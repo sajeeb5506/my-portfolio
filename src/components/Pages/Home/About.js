@@ -3,7 +3,7 @@ import './About.css'
 const About = () => {
     return (
         <div class="  px-8 ">
-           <h1 className='text-center font-bold text-3xl mb-5'>About Me</h1>
+           <h1 className='text-4xl font-extrabold tracking-tight text-gray-900 text-center'>About Me</h1>
            <div className="flex items-center justify-between about-div ">
                
                    <div className="">
@@ -14,6 +14,8 @@ const About = () => {
                   <p className='text-2xl font-serif font-bold text-orange-600 mb-5'>Islamia Govt College</p>
                   <h2 className='text-3xl font-sans font-bold'>BBA 2019-20 sessoin(Physics Department)</h2>
                   <p className='text-2xl font-serif font-bold text-orange-600 mb-5'>National University, Gazipur , Bangladesh</p>
+                  <h2 className='text-3xl font-sans font-bold'>Programming</h2>
+                  <p className='text-2xl font-serif font-bold text-orange-600 mb-5'>Programming Hero , Youtube , Google</p>
                   </div>
                
              
