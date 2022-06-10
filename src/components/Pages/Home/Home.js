@@ -6,10 +6,10 @@ import Projects from './Projects';
 
 const Home = () => {
     return (
-        <div>
+        <div className='bg-gray-900'>
             <Banner/>
-            <About></About>
             <Projects></Projects>
+            <About></About>
             <Contact></Contact>
             
         </div>

@@ -1,0 +1,10 @@
+.active{
+    animation: mymove 3s infinite;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+@keyframes mymove {
+    50% {  box-shadow: -1px 14px 20px -8px rgba(201,86,44,1);}
+  }

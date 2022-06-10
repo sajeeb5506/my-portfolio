@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom';
+import './Navber.css'
 
 const navigation = [
-  { name: 'Home',  to: '/', current: true },
-  { name: 'About', to: '/about', current: false },
-  { name: 'Projects',to: '/projects', current: false },
-  { name: 'Contact', to: '/contact', current: false },
+  { name: 'Home',  href: '#home', current: true },
+  { name: 'About', href: '#about', current: false },
+  { name: 'Projects',href: '#projects', current: false },
+  { name: 'Contact', href: '#contact', current: false },
 ]
 
 function classNames(...classes) {
@@ -17,8 +18,20 @@ function classNames(...classes) {
 
 
 const Navber = () => {
+
+  const [navber,setNavber]=useState(false);
+
+  const changebackground = ()=>{
+    if(window.scrollY >= 70){
+      setNavber(true);
+    }
+    else{
+      setNavber(false);
+    }
+  }
+window.addEventListener('scroll',changebackground);
     return (
-        <Disclosure as="nav" className="bg-gray-900">
+        <Disclosure as="nav" className={navber? 'active bg-gray-900 ' : 'bg-gray-900'}>
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -37,47 +50,50 @@ const Navber = () => {
                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex-shrink-0 flex items-center">
 
-                  <h1 className="block lg:hidden h-8 w-auto  text-indigo-600 text-3xl font-extrabold"> SAJEEB SARKER</h1>
-                  <h1 className="hidden lg:block h-8 w-auto  text-indigo-600 text-3xl font-extrabold"> SAJEEB SARKER</h1>
+                  <h1 className="block lg:hidden h-8 w-auto  text-indigo-200 text-3xl font-extrabold"> SAJEEB SARKER</h1>
+                  <h1 className="hidden lg:block h-8 w-auto  text-indigo-200 text-3xl font-extrabold"> SAJEEB SARKER</h1>
 
                   </div>
                   <div className="hidden sm:block sm:ml-6">
                     <div className="flex space-x-4">
-                      {navigation.map((item) => (
-                        <Link
-                          key={item.name}
-                          to={item.to}
-                          className={classNames(
-                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                            'px-3 py-2 rounded-md text-sm font-medium'
-                          )}
-                          aria-current={item.current ? 'page' : undefined}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                
                     </div>
                   </div>
                 </div>
                
-                 <div className=""> gihersg  </div>
+                 <div className="hidden sm:block sm:ml-6">
+                 {navigation.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className={classNames(
+                            item.current ? 'bg-gray-900 text-indigo-200' : 'text-gray-300 hover:bg-indigo-200 hover:text-orange-600',
+                            'px-3 py-2 rounded-md text-xl font-medium'
+                          )}
+                          aria-current={item.current ? 'page' : undefined}
+                        >
+                          {item.name}
+                        </a>
+                      ))}
+                   
+                    </div>
               </div>
             </div>
   
             <Disclosure.Panel className="sm:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col">
               {navigation.map((item) => (
-                        <Link
+                        <a
                           key={item.name}
-                          to={item.to}
+                          href={item.href}
                           className={classNames(
-                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-indigo-200 hover:text-orange-600',
                             'px-3 py-2 rounded-md text-sm font-medium'
                           )}
                           aria-current={item.current ? 'page' : undefined}
                         >
                           {item.name}
-                        </Link>
+                        </a>
                       ))}
               </div>
             </Disclosure.Panel>
