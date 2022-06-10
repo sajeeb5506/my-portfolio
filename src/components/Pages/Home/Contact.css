@@ -137,3 +137,18 @@
     -moz-box-shadow: 10px 10px 99px 6px rgb(229, 240, 76);
     box-shadow: 10px 10px 99px 6px rgb(203, 172, 20);
 }
+
+
+.about-btn{
+  padding: 20px 30px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: rgb(238, 89, 34);
+}
+.about-btn:hover{
+ 
+  -webkit-box-shadow: 10px 10px 99px 6px rgb(218, 181, 17);
+  -moz-box-shadow: 10px 10px 99px 6px rgb(229, 240, 76);
+  box-shadow: 10px 10px 99px 6px rgb(203, 172, 20);
+}
