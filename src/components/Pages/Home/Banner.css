@@ -22,3 +22,11 @@
     -moz-box-shadow: 10px 10px 99px 6px rgb(229, 240, 76);
     box-shadow: 10px 10px 99px 6px rgb(203, 172, 20);
 }
+.banner-icone{
+    margin-top: 180px
+}
+@media only screen and (max-width: 600px) {
+    .banner-icone{
+        margin-top: 50px
+    }
+  }

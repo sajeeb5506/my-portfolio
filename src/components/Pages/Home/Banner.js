@@ -5,6 +5,11 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom';
 import './Banner.css';
 
+import indin from '../../img/icons8-linkedin-circled.gif'
+import facebk from '../../img/icons8-facebook.gif'
+import github from '../../img/icons8-github.gif'
+import up from '../../img/icons8-scroll-up.gif'
+
 import Typical from 'react-typical'
 
 const Banner = () => {
@@ -67,6 +72,7 @@ const Banner = () => {
                       Get Resume
                     </a>
                   </div>
+                   
                 </div>
               </div>
             </main>
@@ -78,6 +84,12 @@ const Banner = () => {
             src="https://i.ibb.co/LzNGWnP/coding.jpg"
             alt=""
           /> */}
+          <div className=" flex items-center justify-center gap-10 banner-icone">
+          <a   href="https://www.linkedin.com/in/md-sajeeb-sarker/"><img className='social-icon' src={indin} alt="" /></a>   
+                  <a  href="https://github.com/sajeeb5506"><img className='social-icon' src={github} alt="" /></a>   
+                  <a   href="https://www.facebook.com/profile.php?id=100073040528993"><img className='social-icon' src={facebk} alt="" /></a>   
+                  <a   href="#contact"><img className='social-icon' src={up} alt="" /></a> 
+          </div>
         </div>
       </div>
     )

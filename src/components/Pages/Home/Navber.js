@@ -9,6 +9,9 @@ const navigation = [
   { name: 'Home',  href: '#home', current: true },
   { name: 'About', href: '#about', current: false },
   { name: 'Projects',href: '#projects', current: false },
+  
+  
+  { name: 'Skill', href: '#skill', current: false },
   { name: 'Contact', href: '#contact', current: false },
 ]
 
@@ -62,6 +65,7 @@ window.addEventListener('scroll',changebackground);
                 </div>
                
                  <div className="hidden sm:block sm:ml-6">
+                 
                  {navigation.map((item) => (
                         <a
                           key={item.name}
@@ -75,13 +79,14 @@ window.addEventListener('scroll',changebackground);
                           {item.name}
                         </a>
                       ))}
-                   
+                   <Link to='/blog' className=' text-gray-300 hover:bg-indigo-200 hover:text-orange-600 px-3 py-2 rounded-md text-xl font-medium'>Blog</Link>
                     </div>
               </div>
             </div>
   
             <Disclosure.Panel className="sm:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col">
+               
               {navigation.map((item) => (
                         <a
                           key={item.name}
@@ -95,6 +100,7 @@ window.addEventListener('scroll',changebackground);
                           {item.name}
                         </a>
                       ))}
+                       <Link to='/blog'  className=' text-gray-300 hover:bg-indigo-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium'>Blog</Link>
               </div>
             </Disclosure.Panel>
           </>

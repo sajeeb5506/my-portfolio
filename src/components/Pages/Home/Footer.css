@@ -1,0 +1,10 @@
+.social-icon{
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+.social-icon:hover{
+    -webkit-box-shadow: 10px 10px 99px 6px rgb(218, 181, 17);
+    -moz-box-shadow: 10px 10px 99px 6px rgb(229, 240, 76);
+    box-shadow: 10px 10px 99px 6px rgb(203, 172, 20);
+}
